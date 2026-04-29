@@ -10,7 +10,9 @@ import java.util.List;
 public class DetailedParseTreeNode {
 
     private String nodeType;
+    
     private String text;
+    
     private String ruleName;
     private Integer tokenType;
     private String tokenName;
@@ -20,6 +22,9 @@ public class DetailedParseTreeNode {
     private int stopColumn;
 
     private List<DetailedParseTreeNode> children = new ArrayList<>();
+    public List<DetailedParseTreeNode> getChildren() {
+        return children;
+    }
 
     public DetailedParseTreeNode(String nodeType) {
         this.setNodeType(nodeType);
@@ -33,9 +38,8 @@ public class DetailedParseTreeNode {
         this.ruleName = ruleName;
     }
 
-	public void setText(String text2) {
-		// TODO Auto-generated method stub
-		
+	public void setText(String text) {
+		this.text=text;	
 	}
 
 	public int getStartColumn() {
